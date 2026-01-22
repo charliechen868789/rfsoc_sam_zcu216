@@ -12,11 +12,16 @@
 </table>
 
 # Spectrum Analyser on PYNQ
-This repository is only compatible with [PYNQ images v2.7](https://github.com/Xilinx/PYNQ/releases) and greater for the following RFSoC development boards:
+This repository has been tested with [PYNQ image v3.1.1](https://github.com/Xilinx/PYNQ/releases) (Vivado 2024.1) for the following RFSoC development boards. Newer PYNQ versions may require different Vivado versions; please verify compatibility against the PYNQ release notes:
 * [ZCU208](https://www.xilinx.com/products/boards-and-kits/zcu208.html),
 * [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html),
-* [RFSoC4x2](http://rfsoc-pynq.io/), 
-* [RFSoC2x2](http://rfsoc-pynq.io/).
+* [RFSoC4x2](http://rfsoc-pynq.io/),
+* [RFSoC2x2](http://rfsoc-pynq.io/),
+
+The following boards are limited to PYNQ version 2.7 and Vivado 2020.2 since this board is not officially supported by PYNQ and no official SD card image exists:
+* [ZCU216](https://www.xilinx.com/products/boards-and-kits/zcu216.html).
+
+The SD card image for this board has been made available from the following repository: [sarafs1926/ZCU216-PYNQ](https://github.com/sarafs1926/ZCU216-PYNQ).
 
 <p align="center">
   <img src="./demonstration.gif" width="75%" height="75%" />
@@ -48,12 +53,11 @@ Once installation has complete you will find the Spectrum Analyser notebooks in 
 
 ## Using the Project Files
 The following software is required to use the project files in this repository.
-- Vivado Design Suite 2020.2
-- System Generator for DSP
-- MATLAB R2020a
+- Vivado Design Suite 2024.1
+- System Generator for DSP (MATLAB R2020a with Vivado Design Suite 2020.2)
 
 ### Vivado
-This project can be built with Vivado from the command line. Open Vivado 2020.2 and execute the following into the tcl console:
+This project can be built with Vivado from the command line. Open Vivado 2024.1 and execute the following into the tcl console:
 ```sh
 cd /<repository-location>/boards/<board-name>/rfsoc_sam/
 ```
