@@ -6,7 +6,7 @@ on:
       boards:
         description: "Boards to build: comma-separated (e.g. RFSoC4x2,ZCU208) or 'all'"
         required: true
-        default: "RFSoC4x2,ZCU208,ZCU111,ZCU216,RFSoC2x2"
+        default: "RFSoC4x2,ZCU208,ZCU111,RFSoC2x2"
       vivado_settings:
         description: "OPTIONAL override: full path to settings64.sh on this runner"
         required: false
@@ -19,6 +19,11 @@ on:
       - "ip/**"
       - "boards/**/rfsoc_sam/rfsoc_sam.tcl"
       - "boards/**/rfsoc_sam/constraints.xdc"
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: read
 
 jobs:
   prep-matrix:
@@ -36,12 +41,11 @@ jobs:
         run: |
           set -euo pipefail
 
-          allowed="ZCU111 ZCU208 ZCU216 RFSoC2x2 RFSoC4x2"
+          allowed="ZCU111 ZCU208 RFSoC2x2 RFSoC4x2"
 
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             boards_in="${{ github.event.inputs.boards }}"
-            if [ -z "$boards_in" ]; then boards_in="RFSoC4x2,ZCU208,ZCU111,ZCU216,RFSoC2x2"; fi
-
+            if [ -z "$boards_in" ]; then boards_in="RFSoC4x2,ZCU208,ZCU111,RFSoC2x2"; fi
             if [ "$boards_in" = "all" ]; then
               boards="$allowed"
             else

@@ -16,12 +16,7 @@ This repository has been tested with [PYNQ image v3.1.1](https://github.com/Xili
 * [ZCU208](https://www.xilinx.com/products/boards-and-kits/zcu208.html),
 * [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html),
 * [RFSoC4x2](http://rfsoc-pynq.io/),
-* [RFSoC2x2](http://rfsoc-pynq.io/),
-
-The following boards are limited to PYNQ version 2.7 and Vivado 2020.2 since this board is not officially supported by PYNQ and no official SD card image exists:
-* [ZCU216](https://www.xilinx.com/products/boards-and-kits/zcu216.html).
-
-The SD card image for this board has been made available from the following repository: [sarafs1926/ZCU216-PYNQ](https://github.com/sarafs1926/ZCU216-PYNQ).
+* [RFSoC2x2](http://rfsoc-pynq.io/).
 
 <p align="center">
   <img src="./demonstration.gif" width="75%" height="75%" />
