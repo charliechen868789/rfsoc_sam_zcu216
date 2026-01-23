@@ -149,6 +149,7 @@ jobs:
           set -euo pipefail
           source "$VIVADO_SETTINGS_RESOLVED"
           cd "boards/${{ matrix.boards }}/rfsoc_sam/"
+          rm -rf bitstream/
           make all
           cd ../../..
 
