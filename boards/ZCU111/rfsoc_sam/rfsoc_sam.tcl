@@ -218,6 +218,8 @@ proc create_hier_cell_channel_13 { parentCell nameHier } {
   set_property -dict [list \
     CONFIG.M00_TDATA_REMAP {tdata[127:0]} \
     CONFIG.M01_TDATA_REMAP {tdata[127:0]} \
+    CONFIG.M_TDATA_NUM_BYTES {16} \
+    CONFIG.S_TDATA_NUM_BYTES {16} \
   ] $axis_broadcaster
 
 
@@ -291,6 +293,8 @@ proc create_hier_cell_channel_12 { parentCell nameHier } {
   set_property -dict [list \
     CONFIG.M00_TDATA_REMAP {tdata[127:0]} \
     CONFIG.M01_TDATA_REMAP {tdata[127:0]} \
+    CONFIG.M_TDATA_NUM_BYTES {16} \
+    CONFIG.S_TDATA_NUM_BYTES {16} \
   ] $axis_broadcaster
 
 
@@ -364,6 +368,8 @@ proc create_hier_cell_channel_11_1 { parentCell nameHier } {
   set_property -dict [list \
     CONFIG.M00_TDATA_REMAP {tdata[127:0]} \
     CONFIG.M01_TDATA_REMAP {tdata[127:0]} \
+    CONFIG.M_TDATA_NUM_BYTES {16} \
+    CONFIG.S_TDATA_NUM_BYTES {16} \
   ] $axis_broadcaster
 
 
@@ -437,6 +443,8 @@ proc create_hier_cell_channel_10_1 { parentCell nameHier } {
   set_property -dict [list \
     CONFIG.M00_TDATA_REMAP {tdata[127:0]} \
     CONFIG.M01_TDATA_REMAP {tdata[127:0]} \
+    CONFIG.M_TDATA_NUM_BYTES {16} \
+    CONFIG.S_TDATA_NUM_BYTES {16} \
   ] $axis_broadcaster
 
 
@@ -2226,6 +2234,12 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
     CONFIG.PSU__SATA__REF_CLK_FREQ {125} \
     CONFIG.PSU__SATA__REF_CLK_SEL {Ref Clk3} \
     CONFIG.PSU__SAXIGP4__DATA_WIDTH {128} \
+    CONFIG.PSU__SD0__CLK_100_SDR_OTAP_DLY {0x3} \
+    CONFIG.PSU__SD0__CLK_200_SDR_OTAP_DLY {0x3} \
+    CONFIG.PSU__SD0__CLK_50_DDR_ITAP_DLY {0x3D} \
+    CONFIG.PSU__SD0__CLK_50_DDR_OTAP_DLY {0x4} \
+    CONFIG.PSU__SD0__CLK_50_SDR_ITAP_DLY {0x15} \
+    CONFIG.PSU__SD0__CLK_50_SDR_OTAP_DLY {0x5} \
     CONFIG.PSU__SD0__PERIPHERAL__ENABLE {0} \
     CONFIG.PSU__SD0__RESET__ENABLE {0} \
     CONFIG.PSU__SD1_COHERENCY {0} \
@@ -2427,6 +2441,7 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
   # Restore current instance
   current_bd_instance $oldCurInst
 
+  validate_bd_design
   save_bd_design
 }
 # End of create_root_design()
@@ -2438,6 +2453,4 @@ Port;FD4A0000;FD4AFFFF;1|FPD;DPDMA;FD4C0000;FD4CFFFF;1|FPD;DDR_XMPU5_CFG;FD05000
 
 create_root_design ""
 
-
-common::send_gid_msg -ssname BD::TCL -id 2053 -severity "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
 
