@@ -218,6 +218,8 @@ proc create_hier_cell_channel_10 { parentCell nameHier } {
   set_property -dict [list \
     CONFIG.M00_TDATA_REMAP {tdata[127:0]} \
     CONFIG.M01_TDATA_REMAP {tdata[127:0]} \
+    CONFIG.M_TDATA_NUM_BYTES {16} \
+    CONFIG.S_TDATA_NUM_BYTES {16} \
   ] $axis_broadcaster
 
 
@@ -291,6 +293,8 @@ proc create_hier_cell_channel_00_1 { parentCell nameHier } {
   set_property -dict [list \
     CONFIG.M00_TDATA_REMAP {tdata[127:0]} \
     CONFIG.M01_TDATA_REMAP {tdata[127:0]} \
+    CONFIG.M_TDATA_NUM_BYTES {16} \
+    CONFIG.S_TDATA_NUM_BYTES {16} \
   ] $axis_broadcaster
 
 
@@ -1931,6 +1935,7 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
   # Restore current instance
   current_bd_instance $oldCurInst
 
+  validate_bd_design
   save_bd_design
 }
 # End of create_root_design()
@@ -1942,6 +1947,4 @@ Port;FD4A0000;FD4AFFFF;0|FPD;DPDMA;FD4C0000;FD4CFFFF;0|FPD;DDR_XMPU5_CFG;FD05000
 
 create_root_design ""
 
-
-common::send_gid_msg -ssname BD::TCL -id 2053 -severity "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
 
