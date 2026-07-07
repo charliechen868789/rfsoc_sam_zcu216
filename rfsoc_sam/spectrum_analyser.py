@@ -398,6 +398,7 @@ class SpectrumAnalyser(DefaultIP):
         else:
             buffer[:] = np.int32(np.ones(window_size)[:]*2**14)
             window = 'rectangular'
+        buffer.sync_to_device()
         self._window_transfer = 1
         while not self.window_ready:
             pass
@@ -541,6 +542,7 @@ class SpectrumAnalyser(DefaultIP):
         """
         while not self.dma_enable:
             pass
+        self._buffer[0].sync_from_device()
         return np.array(self._buffer[0], dtype=np.single)
         
     bindto = ['xilinx.com:ip:SpectrumAnalyser:1.1']
