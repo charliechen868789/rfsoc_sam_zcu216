@@ -1084,10 +1084,26 @@ proc create_hier_cell_radio { parentCell nameHier } {
   #
   # ZCU216 PORT NOTE: these ADC0/ADC1 settings (Data_Type=1, Mixer_Mode=0,
   # Mixer_Type=2 -- AMD's documented "Real Input to I/Q Output" mode, PG269)
-  # are numerically unchanged from ZCU208's ZU48DR config, only the sample
-  # rate/refclk/data-width were adjusted for the ZU49DR's tighter ADC limits
-  # (2.4576 GSPS @ 409.6MHz refclk, 12-bit -- ZU48DR allowed up to ~5 GSPS
-  # and 8-bit). Despite identical mode settings, the ZU49DR's RFDC exposes
+  # are the same mode ZCU208's ZU48DR config uses; sample rate/refclk/
+  # data-width were adjusted for the ZU49DR's tighter ADC limits (2.4576
+  # GSPS, 12-bit -- ZU48DR allowed up to ~5 GSPS and 8-bit).
+  #
+  # CLOCKING: confirmed on real hardware. ADC0/ADC1 lock reliably at
+  # 409.600MHz refclk (borrowed unchanged from ZCU208). DAC2/DAC3 do NOT --
+  # ZCU216 has two separate LMX2594 chips (ZCU208 has one), and no refclk
+  # value routed through either chip via `xrfclk.set_ref_clks()` (409.6MHz
+  # or AMD's documented 491.52MHz default) ever locked the DAC tiles,
+  # regardless of sample rate or clock topology (DAC2 vs DAC3 as the
+  # externally-clocked tile). The fix: DAC2/DAC3_Refclk_Freq below is
+  # 245.760MHz -- the LMK04828's raw, undivided output, fed to the tile
+  # directly rather than through either LMX2594. Found by loading AMD's own
+  # official RFDC example bitstream (from the ZCU216 RFDC Evaluation Tool
+  # BSP) on this same board: all 8 tiles (4 ADC + 4 DAC) locked using
+  # exactly this 245.76MHz-direct reference for every tile. `xrfclk`
+  # already programs the LMK to 245.76MHz as part of this design's existing
+  # clock setup, so the signal DAC2/DAC3 now use was already present and
+  # proven to reach these tiles -- it just wasn't being pointed at.
+  # Despite identical mode settings, the ZU49DR's RFDC exposes
   # each enabled ADC slice as a SINGLE m_axis port (e.g. rfdc/m00_axis,
   # packing 6 complex I/Q sample pairs per clock into one 192-bit TDATA
   # word) rather than the separate I/Q port pair ZU48DR gives with the same
@@ -1143,12 +1159,12 @@ proc create_hier_cell_radio { parentCell nameHier } {
     CONFIG.ADC_Slice22_Enable {false} \
     CONFIG.DAC2_Clock_Dist {1} \
     CONFIG.DAC2_PLL_Enable {true} \
-    CONFIG.DAC2_Refclk_Freq {409.600} \
-    CONFIG.DAC2_Sampling_Rate {2.4576} \
+    CONFIG.DAC2_Refclk_Freq {245.760} \
+    CONFIG.DAC2_Sampling_Rate {4.9152} \
     CONFIG.DAC3_Clock_Source {6} \
     CONFIG.DAC3_PLL_Enable {true} \
-    CONFIG.DAC3_Refclk_Freq {409.600} \
-    CONFIG.DAC3_Sampling_Rate {2.4576} \
+    CONFIG.DAC3_Refclk_Freq {245.760} \
+    CONFIG.DAC3_Sampling_Rate {4.9152} \
     CONFIG.DAC_Data_Type20 {0} \
     CONFIG.DAC_Data_Width20 {16} \
     CONFIG.DAC_Interpolation_Mode20 {2} \
@@ -1297,7 +1313,7 @@ proc create_root_design { parentCell } {
 
   set dac2_clk [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 dac2_clk ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {491520000.0} \
+   CONFIG.FREQ_HZ {245760000.0} \
    ] $dac2_clk
 
   set default_sysclk_c0_300mhz [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_clock_rtl:1.0 default_sysclk_c0_300mhz ]

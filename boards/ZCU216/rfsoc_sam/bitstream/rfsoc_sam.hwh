@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 20 12:44:27 2026" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Jul 20 21:54:58 2026" VIVADOVERSION="2024.1">
 
   <SYSTEMINFO ARCH="zynquplusRFSOC" BOARD="xilinx.com:zcu216:part0:2.0" DEVICE="xczu49dr" NAME="rfsoc_sam" PACKAGE="ffvf1760" SPEEDGRADE="-2"/>
 
@@ -14,12 +14,12 @@
         <CONNECTION INSTANCE="radio_rfdc" PORT="adc1_clk_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="491520000.0" DIR="I" NAME="dac2_clk_clk_n" SIGIS="clk" SIGNAME="radio_rfdc_dac2_clk_n">
+    <PORT CLKFREQUENCY="245760000.0" DIR="I" NAME="dac2_clk_clk_n" SIGIS="clk" SIGNAME="radio_rfdc_dac2_clk_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="radio_rfdc" PORT="dac2_clk_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="491520000.0" DIR="I" NAME="dac2_clk_clk_p" SIGIS="clk" SIGNAME="radio_rfdc_dac2_clk_p">
+    <PORT CLKFREQUENCY="245760000.0" DIR="I" NAME="dac2_clk_clk_p" SIGIS="clk" SIGNAME="radio_rfdc_dac2_clk_p">
       <CONNECTIONS>
         <CONNECTION INSTANCE="radio_rfdc" PORT="dac2_clk_p"/>
       </CONNECTIONS>
@@ -137,7 +137,7 @@
     </BUSINTERFACE>
     <BUSINTERFACE BUSNAME="External_Interface_dac2_clk" NAME="dac2_clk" TYPE="TARGET">
       <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
-      <PARAMETER NAME="FREQ_HZ" VALUE="491520000.0"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="245760000.0"/>
       <PORTMAPS>
         <PORTMAP LOGICAL="CLK_N" PHYSICAL="dac2_clk_clk_n"/>
         <PORTMAP LOGICAL="CLK_P" PHYSICAL="dac2_clk_clk_p"/>
@@ -3666,7 +3666,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -3746,7 +3746,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_003_im_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -3797,7 +3797,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -3877,7 +3877,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_003_re_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -3928,7 +3928,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -4008,7 +4008,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_0_im_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -4059,7 +4059,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -4139,7 +4139,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_0_re_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -4190,7 +4190,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -4270,7 +4270,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_12_im_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -4321,7 +4321,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -4401,7 +4401,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_12_re_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -4452,7 +4452,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -4532,7 +4532,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_2_im_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -4583,7 +4583,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="m_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -4663,7 +4663,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_2_re_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -6336,7 +6336,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -6391,7 +6391,7 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -9285,7 +9285,7 @@
         <PARAMETER NAME="C_XSG_BWSELECTOR_S_AXI_HIGHADDR" VALUE="0xA000FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -9434,7 +9434,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_00_decimator_m_axis_im" NAME="m_axis_im" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -9453,7 +9453,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_00_decimator_m_axis_re" NAME="m_axis_re" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -9472,7 +9472,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_003_im_M_AXIS" NAME="s_axis_im" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -9492,7 +9492,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_003_re_M_AXIS" NAME="s_axis_re" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -9517,7 +9517,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -9578,7 +9578,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA001FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -9868,7 +9868,7 @@
             <CONNECTION INSTANCE="radio_receiver_channel_00_decimator" PORT="m_axis_re_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -9887,7 +9887,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -9939,7 +9939,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -10004,7 +10004,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_00_decimator_m_axis_re" NAME="AXI4_Stream_Real_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -10023,7 +10023,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_00_decimator_m_axis_im" NAME="AXI4_Stream_Imag_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -10061,7 +10061,7 @@
         <PARAMETER NAME="C_XSG_BWSELECTOR_S_AXI_HIGHADDR" VALUE="0xA002FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -10210,7 +10210,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_02_decimator_m_axis_im" NAME="m_axis_im" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -10229,7 +10229,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_02_decimator_m_axis_re" NAME="m_axis_re" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -10248,7 +10248,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_0_im_M_AXIS" NAME="s_axis_im" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -10268,7 +10268,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_0_re_M_AXIS" NAME="s_axis_re" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -10293,7 +10293,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -10354,7 +10354,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA003FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -10644,7 +10644,7 @@
             <CONNECTION INSTANCE="radio_receiver_channel_02_decimator" PORT="m_axis_re_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -10663,7 +10663,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -10715,7 +10715,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -10780,7 +10780,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_02_decimator_m_axis_re" NAME="AXI4_Stream_Real_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -10799,7 +10799,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_02_decimator_m_axis_im" NAME="AXI4_Stream_Imag_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -10837,7 +10837,7 @@
         <PARAMETER NAME="C_XSG_BWSELECTOR_S_AXI_HIGHADDR" VALUE="0xA004FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -10986,7 +10986,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_10_decimator_m_axis_im" NAME="m_axis_im" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -11005,7 +11005,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_10_decimator_m_axis_re" NAME="m_axis_re" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -11024,7 +11024,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_12_im_M_AXIS" NAME="s_axis_im" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -11044,7 +11044,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_12_re_M_AXIS" NAME="s_axis_re" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -11069,7 +11069,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -11130,7 +11130,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA005FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -11420,7 +11420,7 @@
             <CONNECTION INSTANCE="radio_receiver_channel_10_decimator" PORT="m_axis_re_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -11439,7 +11439,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -11491,7 +11491,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -11556,7 +11556,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_10_decimator_m_axis_re" NAME="AXI4_Stream_Real_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -11575,7 +11575,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_10_decimator_m_axis_im" NAME="AXI4_Stream_Imag_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -11613,7 +11613,7 @@
         <PARAMETER NAME="C_XSG_BWSELECTOR_S_AXI_HIGHADDR" VALUE="0xA006FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -11762,7 +11762,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_12_decimator_m_axis_im" NAME="m_axis_im" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -11781,7 +11781,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_12_decimator_m_axis_re" NAME="m_axis_re" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
@@ -11800,7 +11800,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_2_im_M_AXIS" NAME="s_axis_im" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -11820,7 +11820,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_cc_2_re_M_AXIS" NAME="s_axis_re" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -11845,7 +11845,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -11906,7 +11906,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA007FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -12196,7 +12196,7 @@
             <CONNECTION INSTANCE="radio_receiver_channel_12_decimator" PORT="m_axis_re_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -12215,7 +12215,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -12267,7 +12267,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="1"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
@@ -12332,7 +12332,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_12_decimator_m_axis_re" NAME="AXI4_Stream_Real_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -12351,7 +12351,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_receiver_channel_12_decimator_m_axis_im" NAME="AXI4_Stream_Imag_Slave" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -12844,18 +12844,18 @@
         <PARAMETER NAME="C_DAC2_Clock_Source" VALUE="6"/>
         <PARAMETER NAME="C_DAC2_Clock_Source_MX" VALUE="6"/>
         <PARAMETER NAME="C_DAC2_Enable" VALUE="1"/>
-        <PARAMETER NAME="C_DAC2_FBDIV" VALUE="24"/>
-        <PARAMETER NAME="C_DAC2_Fabric_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="C_DAC2_FBDIV" VALUE="40"/>
+        <PARAMETER NAME="C_DAC2_Fabric_Freq" VALUE="307.200"/>
         <PARAMETER NAME="C_DAC2_Fs_Max" VALUE="7.000"/>
         <PARAMETER NAME="C_DAC2_Interpolation" VALUE="2"/>
         <PARAMETER NAME="C_DAC2_Link_Coupling" VALUE="0"/>
         <PARAMETER NAME="C_DAC2_Multi_Tile_Sync" VALUE="false"/>
-        <PARAMETER NAME="C_DAC2_OutDiv" VALUE="4"/>
-        <PARAMETER NAME="C_DAC2_Outclk_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="C_DAC2_OutDiv" VALUE="2"/>
+        <PARAMETER NAME="C_DAC2_Outclk_Freq" VALUE="307.200"/>
         <PARAMETER NAME="C_DAC2_PLL_Enable" VALUE="true"/>
         <PARAMETER NAME="C_DAC2_Refclk_Div" VALUE="1"/>
-        <PARAMETER NAME="C_DAC2_Refclk_Freq" VALUE="409.600"/>
-        <PARAMETER NAME="C_DAC2_Sampling_Rate" VALUE="2.4576"/>
+        <PARAMETER NAME="C_DAC2_Refclk_Freq" VALUE="245.760"/>
+        <PARAMETER NAME="C_DAC2_Sampling_Rate" VALUE="4.9152"/>
         <PARAMETER NAME="C_DAC2_Slices" VALUE="4"/>
         <PARAMETER NAME="C_DAC2_VOP" VALUE="20.0"/>
         <PARAMETER NAME="C_DAC2_Vco" VALUE="9830.4"/>
@@ -12864,18 +12864,18 @@
         <PARAMETER NAME="C_DAC3_Clock_Source" VALUE="6"/>
         <PARAMETER NAME="C_DAC3_Clock_Source_MX" VALUE="7"/>
         <PARAMETER NAME="C_DAC3_Enable" VALUE="1"/>
-        <PARAMETER NAME="C_DAC3_FBDIV" VALUE="24"/>
-        <PARAMETER NAME="C_DAC3_Fabric_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="C_DAC3_FBDIV" VALUE="40"/>
+        <PARAMETER NAME="C_DAC3_Fabric_Freq" VALUE="307.200"/>
         <PARAMETER NAME="C_DAC3_Fs_Max" VALUE="7.000"/>
         <PARAMETER NAME="C_DAC3_Interpolation" VALUE="2"/>
         <PARAMETER NAME="C_DAC3_Link_Coupling" VALUE="0"/>
         <PARAMETER NAME="C_DAC3_Multi_Tile_Sync" VALUE="false"/>
-        <PARAMETER NAME="C_DAC3_OutDiv" VALUE="4"/>
-        <PARAMETER NAME="C_DAC3_Outclk_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="C_DAC3_OutDiv" VALUE="2"/>
+        <PARAMETER NAME="C_DAC3_Outclk_Freq" VALUE="307.200"/>
         <PARAMETER NAME="C_DAC3_PLL_Enable" VALUE="true"/>
         <PARAMETER NAME="C_DAC3_Refclk_Div" VALUE="1"/>
-        <PARAMETER NAME="C_DAC3_Refclk_Freq" VALUE="409.600"/>
-        <PARAMETER NAME="C_DAC3_Sampling_Rate" VALUE="2.4576"/>
+        <PARAMETER NAME="C_DAC3_Refclk_Freq" VALUE="245.760"/>
+        <PARAMETER NAME="C_DAC3_Sampling_Rate" VALUE="4.9152"/>
         <PARAMETER NAME="C_DAC3_Slices" VALUE="4"/>
         <PARAMETER NAME="C_DAC3_VOP" VALUE="20.0"/>
         <PARAMETER NAME="C_DAC3_Vco" VALUE="9830.4"/>
@@ -13573,28 +13573,28 @@
         <PARAMETER NAME="DAC2_Clock_Source" VALUE="6"/>
         <PARAMETER NAME="DAC2_Clock_Source_MX" VALUE="6"/>
         <PARAMETER NAME="DAC2_Enable" VALUE="1"/>
-        <PARAMETER NAME="DAC2_Fabric_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="DAC2_Fabric_Freq" VALUE="307.200"/>
         <PARAMETER NAME="DAC2_Link_Coupling" VALUE="0"/>
         <PARAMETER NAME="DAC2_Multi_Tile_Sync" VALUE="false"/>
-        <PARAMETER NAME="DAC2_Outclk_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="DAC2_Outclk_Freq" VALUE="307.200"/>
         <PARAMETER NAME="DAC2_PLL_Enable" VALUE="true"/>
         <PARAMETER NAME="DAC2_Refclk_Div" VALUE="1"/>
-        <PARAMETER NAME="DAC2_Refclk_Freq" VALUE="409.600"/>
-        <PARAMETER NAME="DAC2_Sampling_Rate" VALUE="2.4576"/>
+        <PARAMETER NAME="DAC2_Refclk_Freq" VALUE="245.760"/>
+        <PARAMETER NAME="DAC2_Sampling_Rate" VALUE="4.9152"/>
         <PARAMETER NAME="DAC2_VOP" VALUE="20.0"/>
         <PARAMETER NAME="DAC3_Band" VALUE="0"/>
         <PARAMETER NAME="DAC3_Clock_Dist" VALUE="0"/>
         <PARAMETER NAME="DAC3_Clock_Source" VALUE="6"/>
         <PARAMETER NAME="DAC3_Clock_Source_MX" VALUE="7"/>
         <PARAMETER NAME="DAC3_Enable" VALUE="1"/>
-        <PARAMETER NAME="DAC3_Fabric_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="DAC3_Fabric_Freq" VALUE="307.200"/>
         <PARAMETER NAME="DAC3_Link_Coupling" VALUE="0"/>
         <PARAMETER NAME="DAC3_Multi_Tile_Sync" VALUE="false"/>
-        <PARAMETER NAME="DAC3_Outclk_Freq" VALUE="153.600"/>
+        <PARAMETER NAME="DAC3_Outclk_Freq" VALUE="307.200"/>
         <PARAMETER NAME="DAC3_PLL_Enable" VALUE="true"/>
         <PARAMETER NAME="DAC3_Refclk_Div" VALUE="1"/>
-        <PARAMETER NAME="DAC3_Refclk_Freq" VALUE="409.600"/>
-        <PARAMETER NAME="DAC3_Sampling_Rate" VALUE="2.4576"/>
+        <PARAMETER NAME="DAC3_Refclk_Freq" VALUE="245.760"/>
+        <PARAMETER NAME="DAC3_Sampling_Rate" VALUE="4.9152"/>
         <PARAMETER NAME="DAC3_VOP" VALUE="20.0"/>
         <PARAMETER NAME="DAC_Coarse_Mixer_Freq00" VALUE="0"/>
         <PARAMETER NAME="DAC_Coarse_Mixer_Freq01" VALUE="0"/>
@@ -14068,7 +14068,7 @@
             <CONNECTION INSTANCE="radio_cc_2_im" PORT="s_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="O" NAME="clk_dac2" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="O" NAME="clk_dac2" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_transmitter_channel_20_control" PORT="AXI4_Lite_ACLK"/>
             <CONNECTION INSTANCE="radio_transmitter_channel_20_control" PORT="IPCORE_CLK"/>
@@ -14116,7 +14116,7 @@
             <CONNECTION INSTANCE="radio_cc_2_im" PORT="m_axis_aclk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="O" NAME="clk_dac3" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="O" NAME="clk_dac3" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_transmitter_channel_30_control" PORT="AXI4_Lite_ACLK"/>
             <CONNECTION INSTANCE="radio_transmitter_channel_30_control" PORT="IPCORE_CLK"/>
@@ -14253,7 +14253,7 @@
             <CONNECTION INSTANCE="radio_transmitter_channel_22_axis_combiner" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="s2_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="s2_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -14293,7 +14293,7 @@
             <CONNECTION INSTANCE="radio_transmitter_channel_32_axis_combiner" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="s3_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="s3_axis_aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -14624,7 +14624,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_axis_combiner_M_AXIS" NAME="s20_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -14644,7 +14644,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_axis_combiner_M_AXIS" NAME="s22_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -14664,7 +14664,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_axis_combiner_M_AXIS" NAME="s30_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -14684,7 +14684,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_axis_combiner_M_AXIS" NAME="s32_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -14712,7 +14712,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="External_Interface_dac2_clk" NAME="dac2_clk" TYPE="TARGET" VLNV="xilinx.com:interface:diff_clock:1.0">
           <PARAMETER NAME="CAN_DEBUG" VALUE="false"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="491520000.0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="245760000.0"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="CLK_N" PHYSICAL="dac2_clk_n"/>
             <PORTMAP LOGICAL="CLK_P" PHYSICAL="dac2_clk_p"/>
@@ -15768,7 +15768,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -15834,7 +15834,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_control_AXI4_Stream_Master" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -15855,7 +15855,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_axis_broadcaster_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -15876,7 +15876,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_axis_broadcaster_M01_AXIS" NAME="M01_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -15925,7 +15925,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -15986,7 +15986,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_axis_combiner_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16006,7 +16006,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_axis_broadcaster_M00_AXIS" NAME="S00_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16027,7 +16027,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_axis_broadcaster_M01_AXIS" NAME="S01_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16062,7 +16062,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA008FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -16177,7 +16177,7 @@
             <CONNECTION INSTANCE="radio_transmitter_channel_20_axis_broadcaster" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -16196,7 +16196,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -16243,7 +16243,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_20_control_AXI4_Stream_Master" NAME="AXI4_Stream_Master" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16329,7 +16329,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -16395,7 +16395,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_control_AXI4_Stream_Master" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16416,7 +16416,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_axis_broadcaster_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16437,7 +16437,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_axis_broadcaster_M01_AXIS" NAME="M01_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16486,7 +16486,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -16547,7 +16547,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_axis_combiner_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16567,7 +16567,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_axis_broadcaster_M00_AXIS" NAME="S00_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16588,7 +16588,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_axis_broadcaster_M01_AXIS" NAME="S01_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16623,7 +16623,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA009FFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -16738,7 +16738,7 @@
             <CONNECTION INSTANCE="radio_transmitter_channel_22_axis_broadcaster" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac2"/>
           </CONNECTIONS>
@@ -16757,7 +16757,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -16804,7 +16804,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_22_control_AXI4_Stream_Master" NAME="AXI4_Stream_Master" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac2"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16890,7 +16890,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -16956,7 +16956,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_control_AXI4_Stream_Master" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16977,7 +16977,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_axis_broadcaster_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -16998,7 +16998,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_axis_broadcaster_M01_AXIS" NAME="M01_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17047,7 +17047,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17108,7 +17108,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_axis_combiner_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17128,7 +17128,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_axis_broadcaster_M00_AXIS" NAME="S00_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17149,7 +17149,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_axis_broadcaster_M01_AXIS" NAME="S01_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17184,7 +17184,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA00AFFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17299,7 +17299,7 @@
             <CONNECTION INSTANCE="radio_transmitter_channel_30_axis_broadcaster" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17318,7 +17318,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -17365,7 +17365,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_30_control_AXI4_Stream_Master" NAME="AXI4_Stream_Master" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17451,7 +17451,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17517,7 +17517,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_control_AXI4_Stream_Master" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17538,7 +17538,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_axis_broadcaster_M00_AXIS" NAME="M00_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17559,7 +17559,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_axis_broadcaster_M01_AXIS" NAME="M01_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17608,7 +17608,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17669,7 +17669,7 @@
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_axis_combiner_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17689,7 +17689,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_axis_broadcaster_M00_AXIS" NAME="S00_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17710,7 +17710,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_axis_broadcaster_M01_AXIS" NAME="S01_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -17745,7 +17745,7 @@
         <PARAMETER NAME="C_HIGHADDR" VALUE="0xA00BFFFF"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="AXI4_Lite_ACLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17860,7 +17860,7 @@
             <CONNECTION INSTANCE="radio_transmitter_channel_32_axis_broadcaster" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="153600000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
+        <PORT CLKFREQUENCY="307200000" DIR="I" NAME="IPCORE_CLK" SIGIS="clk" SIGNAME="radio_rfdc_clk_dac3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="radio_rfdc" PORT="clk_dac3"/>
           </CONNECTIONS>
@@ -17879,7 +17879,7 @@
           <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
           <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
@@ -17926,7 +17926,7 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="radio_transmitter_channel_32_control_AXI4_Stream_Master" NAME="AXI4_Stream_Master" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="rfsoc_sam_rfdc_0_clk_dac3"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="153600000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="307200000"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
